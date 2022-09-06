@@ -1,0 +1,24 @@
+@media (max-width: 1080px) {
+  .info-groups {
+    flex-direction: column;
+  }
+
+  .info-img {
+    width: 50%;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .hero-img {
+    display: none;
+  }
+
+  .cite {
+    display: none;
+  }
+
+  .cta-box {
+    flex-direction: column;
+  }
+} ;
