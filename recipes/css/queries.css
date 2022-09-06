@@ -1,0 +1,15 @@
+@media (max-width: 1080px) {
+  .products {
+    flex-direction: column;
+  }
+
+  .product-img {
+    width: 66%;
+  }
+}
+
+@media (max-width: 400px) {
+  .product-card {
+    padding: 0;
+  }
+} ;
