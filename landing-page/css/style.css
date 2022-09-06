@@ -35,19 +35,39 @@ a:visited {
 .btn:visited {
   display: inline-block;
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
   color: #fff;
+  border: 1px solid#fff;
+  border-radius: 1rem;
+  padding: 0.8rem 1.2rem;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover,
+.btn:active {
+  color: #b91c1c;
+  background-color: #fff;
 }
 
 /* HEADER */
 .main-header {
-  background-color: #b91c1c;
+  background-color: #7f1d1d;
   color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-nav {
+  margin-bottom: auto;
+  border-bottom: 1px solid #d4d4d4;
 }
 
 .nav-list {
   height: 5rem;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,4 +77,40 @@ a:visited {
 
 .nav-logo {
   margin-right: auto;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  flex: 1;
+  padding: 3.6rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 3.6rem;
+  line-height: 1.1;
+}
+
+.hero-text {
+  font-size: 1.6rem;
+}
+
+.hero-img {
+  flex: 1;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 1rem;
 }
