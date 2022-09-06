@@ -119,6 +119,13 @@ a:visited {
   border-radius: 1rem;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.8rem;
+}
 /* MEET US */
 .meet-us {
   display: flex;
@@ -150,4 +157,66 @@ a:visited {
 
 .info-text {
   font-size: 1.2rem;
+}
+
+/* CITE */
+.cite {
+  background-color: #d6d3d1;
+  color: #1c1917;
+  padding: 2.4rem;
+}
+
+.cite-figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.cite-figure p {
+  font-size: 2rem;
+}
+
+.cite-figure figcaption {
+  font-size: 1.6rem;
+  align-self: flex-end;
+}
+
+/* Call to action */
+.cta {
+  padding: 2.4rem;
+}
+
+.cta-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+  color: #fafafa;
+  background-color: #b91c1c;
+  padding: 2.4rem;
+  border-radius: 1rem;
+}
+
+.cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  flex: 2;
+}
+
+.cta-title {
+  font-size: 2rem;
+}
+
+.cta-text p {
+  font-size: 1.2rem;
+}
+
+.cta-button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
