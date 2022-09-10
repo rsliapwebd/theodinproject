@@ -7,4 +7,55 @@
 body {
   font-size: 62.5%;
   font-family: sans-serif;
+  background-color: #e2e8f0;
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 3.6rem;
+}
+
+.main-title {
+  font-size: 3.6rem;
+}
+
+.secondary-title {
+  font-size: 2.4rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.score {
+  width: 10rem;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  align-self: stretch;
+  margin: 0 5rem;
+  font-size: 4.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.variant {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.variant:hover {
+  transform: translateY(-0.5rem);
+  cursor: pointer;
+}
+
+.img-variant {
+  width: 10rem;
 }
