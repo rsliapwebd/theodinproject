@@ -33,7 +33,7 @@ body {
 }
 
 .score {
-  width: 10rem;
+  width: 15rem;
   background-color: #0f172a;
   color: #e2e8f0;
   align-self: stretch;
@@ -41,8 +41,14 @@ body {
   font-size: 4.8rem;
   font-weight: bold;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.2rem;
+}
+
+.player-title {
+  font-size: 1.6rem;
 }
 
 .variant {
@@ -58,4 +64,20 @@ body {
 
 .img-variant {
   width: 10rem;
+}
+
+.choices-text {
+  font-size: 2.4rem;
+}
+
+.result-text {
+  font-size: 3.6rem;
+}
+
+.player {
+  color: #15803d;
+}
+
+.computer {
+  color: #b91c1c;
 }

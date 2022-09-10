@@ -11,21 +11,30 @@
     <h1 class="main-title">Rock Paper Scissors Game</h1>
     <h2 class="secondary-title">Choose your fighter:</h2>
     <div class="container">
-      <div class="score"><span class="player-score">0</span></div>
-      <div class="variant">
-        <img class="img-variant" src="img/rock.jpg" alt="Rock" />
+      <div class="score">
+        <span class="player-title">Player</span>
+        <span class="player-score">0</span>
       </div>
       <div class="variant">
-        <img class="img-variant" src="img/paper.jpg" alt="Paper" />
+        <img class="img-variant rock" src="img/rock.jpg" alt="Rock" />
+      </div>
+      <div class="variant paper">
+        <img class="img-variant paper" src="img/paper.jpg" alt="Paper" />
       </div>
       <div class="variant">
-        <img class="img-variant" src="img/scissors.jpg" alt="Scissors" />
+        <img
+          class="img-variant scissors"
+          src="img/scissors.jpg"
+          alt="Scissors"
+        />
       </div>
-      <div class="score"><span class="computer-score">0</span></div>
+      <div class="score">
+        <span class="player-title">Computer</span>
+        <span class="computer-score">0</span>
+      </div>
     </div>
     <div class="result-box">
-      <div class="result-score"></div>
-      <p class="choises-text"></p>
+      <p class="choices-text"></p>
       <p class="result-text"></p>
     </div>
     <script src="script.js"></script>
