@@ -34,7 +34,7 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #064e3b;
+  background-color: #10b981;
 }
 
 .btn-container {
@@ -53,4 +53,9 @@ h1 {
 
 .grid-cell {
   border: 1px solid #064e3b;
+}
+
+.colored {
+  background-color: #064e3b;
+  border: 1px solid #ecfdf5;
 }
