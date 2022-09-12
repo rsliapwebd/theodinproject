@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 3.6rem;
   padding: 3.6rem;
 }
