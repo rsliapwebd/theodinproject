@@ -5,6 +5,7 @@ const nums = document.querySelectorAll(".num");
 
 const numberArray = [];
 let stringNumber = "";
+let canEnter = true;
 
 // Math functions
 const multiply = function (num1, num2) {
@@ -20,29 +21,14 @@ const substract = function (num1, num2) {
   return num1 - num2;
 };
 
-nums.forEach((num) =>
-  num.addEventListener("click", function () {
-    display.textContent += num.textContent;
-    stringNumber += num.textContent;
-  })
-);
-
-const operators = document.querySelectorAll(".operator");
-
-operators.forEach((operator) => {
-  operator.addEventListener("click", function () {
-    display.textContent += operator.textContent;
-    numberArray.push(stringNumber);
-    stringNumber = "";
-  });
-});
-
+// Pressing equal button
 const equal = document.querySelector(".equal");
 
 equal.addEventListener("click", function () {
   let displayStr = display.textContent;
   numberArray.push(stringNumber);
   stringNumber = "";
+  canEnter = false;
 
   if (displayStr.includes("x")) {
     display.textContent = multiply(...numberArray);
@@ -51,6 +37,41 @@ equal.addEventListener("click", function () {
   } else if (displayStr.includes("+")) {
     display.textContent = add(...numberArray);
   } else if (displayStr.includes("-")) {
-    displayStr.textContent = substract(...numberArray);
+    display.textContent = substract(...numberArray);
+    console.log(canEnter);
   }
 });
+
+// Pressing number buttons
+if (canEnter) {
+  nums.forEach((num) =>
+    num.addEventListener("click", function () {
+      display.textContent += num.textContent;
+      stringNumber += num.textContent;
+      console.log(canEnter);
+    })
+  );
+}
+
+// Pressing math operators buttons
+const operators = document.querySelectorAll(".operator");
+
+if (canEnter) {
+  operators.forEach((operator) => {
+    operator.addEventListener("click", function () {
+      display.textContent += operator.textContent;
+      numberArray.push(stringNumber);
+      stringNumber = "";
+    });
+  });
+}
+
+// Clear display
+const clearDisplay = function () {
+  display.textContent = "";
+  stringNumber = "";
+  canEnter = true;
+};
+
+const clearBtn = document.querySelector(".clear");
+clearBtn.addEventListener("click", clearDisplay);
