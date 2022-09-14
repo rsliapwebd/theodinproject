@@ -28,7 +28,6 @@ equal.addEventListener("click", function () {
   let displayStr = display.textContent;
   numberArray.push(stringNumber);
   stringNumber = "";
-  canEnter = false;
 
   if (displayStr.includes("x")) {
     display.textContent = multiply(...numberArray);
@@ -40,6 +39,8 @@ equal.addEventListener("click", function () {
     display.textContent = substract(...numberArray);
     console.log(canEnter);
   }
+
+  canEnter = false;
 });
 
 // Pressing number buttons
@@ -71,6 +72,10 @@ const clearDisplay = function () {
   display.textContent = "";
   stringNumber = "";
   canEnter = true;
+
+  for (let i = 0; i <= numberArray.length; i++) {
+    numberArray.pop();
+  }
 };
 
 const clearBtn = document.querySelector(".clear");
