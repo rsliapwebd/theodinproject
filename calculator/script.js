@@ -44,28 +44,29 @@ equal.addEventListener("click", function () {
 });
 
 // Pressing number buttons
-if (canEnter) {
-  nums.forEach((num) =>
-    num.addEventListener("click", function () {
+
+nums.forEach((num) =>
+  num.addEventListener("click", function () {
+    if (canEnter) {
       display.textContent += num.textContent;
       stringNumber += num.textContent;
       console.log(canEnter);
-    })
-  );
-}
+    }
+  })
+);
 
 // Pressing math operators buttons
 const operators = document.querySelectorAll(".operator");
 
-if (canEnter) {
-  operators.forEach((operator) => {
-    operator.addEventListener("click", function () {
+operators.forEach((operator) => {
+  operator.addEventListener("click", function () {
+    if (canEnter) {
       display.textContent += operator.textContent;
       numberArray.push(stringNumber);
       stringNumber = "";
-    });
+    }
   });
-}
+});
 
 // Clear display
 const clearDisplay = function () {
