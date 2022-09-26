@@ -7,4 +7,128 @@
 body {
   font-size: 62.5%;
   font-family: "Oswald", sans-serif;
+  height: 100vh;
+  display: flex;
+}
+
+a:link,
+a:visited {
+  color: #075985;
+}
+
+.aside-container {
+  flex: 1;
+  background: url("../img/background-left.jpg") center center/cover;
+  color: #f1f5f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.2rem;
+}
+
+.logo-text {
+  font-size: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 3.2rem;
+}
+
+.logo {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.credits {
+  margin-top: auto;
+}
+
+.main-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  padding: 3.2rem;
+  background-color: #f1f5f9;
+  color: #075985;
+}
+
+.form-text {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.main-form {
+  padding: 3.2rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.form-legend {
+  font-size: 2.4rem;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.6rem;
+  border: none;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input {
+  width: 20rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+}
+
+input:focus {
+  outline: #075985;
+}
+
+.account-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-family: "Oswald", sans-serif;
+  background-color: #075985;
+  color: #f1f5f9;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #0c4a6e;
+}
+
+.account-text {
+  font-size: 0.8rem;
 }

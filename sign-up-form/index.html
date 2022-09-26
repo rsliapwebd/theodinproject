@@ -17,9 +17,9 @@
   <body>
     <aside class="aside-container">
       <h1 class="logo-text">
-        <img src="img/odin-logo.png" alt="Odin Logo" />ODIN ARMY
+        <img class="logo" src="img/odin-logo.png" alt="Odin Logo" />ODIN ARMY
       </h1>
-      <p>Photo by Robert Bahn on Unsplash</p>
+      <p class="credits">Photo by Robert Bahn on Unsplash</p>
     </aside>
     <main class="main-container">
       <h2 class="form-text">
@@ -32,37 +32,39 @@
         <fieldset class="form-field">
           <div class="form-group">
             <label for="first-name">FIRST NAME</label>
-            <input type="text" id="first-name" />
+            <input required type="text" id="first-name" />
           </div>
           <div class="form-group">
             <label for="last-name">LAST NAME</label>
-            <input type="text" id="last-name" />
+            <input required type="text" id="last-name" />
           </div>
         </fieldset>
         <fieldset class="form-field">
           <div class="form-group">
             <label for="email">EMAIL</label>
-            <input type="email" id="email" />
+            <input required type="email" id="email" />
           </div>
           <div class="form-group">
             <label for="phone">PHONE NUMBER</label>
-            <input type="phone" id="phone" />
+            <input required type="phone" id="phone" />
           </div>
         </fieldset>
         <fieldset class="form-field">
           <div class="form-group">
             <label for="password">PASSWORD</label>
-            <input type="password" id="password" />
+            <input required type="password" id="password" />
           </div>
           <div class="form-group">
             <label for="password">CONFIRM NUMBER</label>
-            <input type="password" id="password" />
+            <input required type="password" id="password" />
           </div>
         </fieldset>
-        <button type="submit">Create Account</button>
-        <p class="account-text">
-          Already have an account? <a href="#">Log In</a>
-        </p>
+        <div class="account-group">
+          <button class="btn" type="submit">Create Account</button>
+          <p class="account-text">
+            Already have an account? <a href="#">Log In</a>
+          </p>
+        </div>
       </form>
     </main>
   </body>
