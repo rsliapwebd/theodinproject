@@ -7,8 +7,9 @@
 body {
   font-size: 62.5%;
   font-family: "Oswald", sans-serif;
-  height: 100vh;
+  background-color: #f1f5f9;
   display: flex;
+  padding: 1.6rem;
 }
 
 a:link,
