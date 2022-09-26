@@ -5,9 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up Form</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Sign Up Form</h1>
+    <aside class="aside-container">
+      <h1 class="logo-text">
+        <img src="img/odin-logo.png" alt="Odin Logo" />ODIN ARMY
+      </h1>
+      <p>Photo by Robert Bahn on Unsplash</p>
+    </aside>
+    <main class="main-container">
+      <h2 class="form-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sed
+        accusantium praesentium, error facilis, perspiciatis ducimus, mollitia
+        dolore non tenetur ipsam laboriosam distinctio exercitationem cum?
+      </h2>
+      <form action="#" class="main-form">
+        <legend class="form-legend">Sign Up For Odin Army</legend>
+        <fieldset class="form-field">
+          <div class="form-group">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name" />
+          </div>
+        </fieldset>
+        <fieldset class="form-field">
+          <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">PHONE NUMBER</label>
+            <input type="phone" id="phone" />
+          </div>
+        </fieldset>
+        <fieldset class="form-field">
+          <div class="form-group">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" />
+          </div>
+          <div class="form-group">
+            <label for="password">CONFIRM NUMBER</label>
+            <input type="password" id="password" />
+          </div>
+        </fieldset>
+        <button type="submit">Create Account</button>
+        <p class="account-text">
+          Already have an account? <a href="#">Log In</a>
+        </p>
+      </form>
+    </main>
   </body>
 </html>
