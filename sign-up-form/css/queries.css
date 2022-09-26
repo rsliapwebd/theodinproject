@@ -1,0 +1,19 @@
+@media (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+
+  .logo-text {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .form-text {
+    display: none;
+  }
+
+  .form-field {
+    flex-direction: column;
+  }
+}
