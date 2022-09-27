@@ -7,4 +7,70 @@
 body {
   font-size: 62.5%;
   font-family: "Inter Tight", sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 3fr;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.aside {
+  background-color: #14b8a6;
+  color: #fff;
+  grid-row: 1 / -1;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3.2rem;
+}
+
+.main-title {
+  font-size: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.aside-nav {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.nav-tabs,
+.nav-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.aside-nav li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.aside-nav li:hover {
+  color: #f1f5f9;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.main {
+  background-color: #22d3ee;
 }
