@@ -15,9 +15,30 @@ body {
   height: 100vh;
 }
 
+/* UTILITIES */
+
 ul {
   list-style: none;
 }
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  background-color: #14b8a6;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 9000px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #0d9488;
+}
+
+/* ASIDE */
 
 .aside {
   background-color: #14b8a6;
@@ -67,9 +88,92 @@ ul {
   color: #f1f5f9;
 }
 
+/* HEADER */
+
 .header {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 2rem 1rem 1rem rgba(255, 255, 255, 0.1);
 }
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 1.2rem;
+}
+
+.searchbar,
+.notifications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.search {
+  width: 30rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #e2e8f0;
+  padding: 0.4rem 1.8rem;
+}
+
+.search:focus {
+  border: 3px solid #14b8a6;
+  outline: none;
+}
+
+.top-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.username {
+  font-size: 1.2rem;
+}
+
+.header-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+.greetings img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.greetings,
+.panel-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.greetings-text {
+  font-size: 1.2rem;
+}
+
+.username-info {
+  font-size: 1.6rem;
+}
+
+.panel-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* MAIN */
 
 .main {
   background-color: #22d3ee;
