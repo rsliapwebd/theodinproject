@@ -44,7 +44,7 @@ ul {
   background-color: #14b8a6;
   color: #fff;
   grid-row: 1 / -1;
-  padding: 3.2rem;
+  padding: 2.4rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -53,7 +53,7 @@ ul {
 }
 
 .main-title {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,10 +61,10 @@ ul {
 }
 
 .aside-nav {
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 1.6rem;
 }
 
 .nav-tabs,
@@ -221,6 +221,14 @@ ul {
 
 .icons-container {
   align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.icons-container ion-icon {
+  font-size: 1rem;
 }
 
 .anno-container,
