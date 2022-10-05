@@ -64,8 +64,14 @@ function bookRemove() {
   const btnsRemove = document.querySelectorAll(".btn-remove");
   btnsRemove.forEach((btn) =>
     btn.addEventListener("click", function (e) {
-      const ancestor = e.target;
-      ancestor.closest(".book").remove();
+      library = library.filter(
+        (item) =>
+          item.title !==
+          e.target.closest(".book").children[0].textContent.slice(7)
+      );
+      console.log(library);
+      // console.log(library, index);
+      e.target.closest(".book").remove();
     })
   );
 }
