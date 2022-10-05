@@ -33,12 +33,44 @@ h1 {
 }
 
 .library-container {
-  height: 10rem;
   width: 100%;
   padding: 1.6rem;
   background-color: #fff;
   border: 5px solid #a5b4fc;
   border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.cta-text {
+  font-size: 3.6rem;
+  color: rgba(30, 41, 59, 0.25);
+}
+
+.book {
+  height: 25vh;
+  width: 25vh;
+  font-size: 1rem;
+  border: 1px solid #1e293b;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem;
+}
+
+.book-btn {
+  background-color: rgba(30, 41, 59, 0.5);
+}
+
+.read {
+  background-color: #14b8a6;
+  color: #fff;
 }
 
 .book-form {
@@ -58,6 +90,14 @@ h1 {
   align-self: center;
 }
 
+.book-form .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
 .book-form fieldset {
   display: flex;
   flex-direction: column;
@@ -69,8 +109,10 @@ h1 {
 }
 
 .book-form input {
-  padding: 0.6rem 1.2rem;
+  width: 33vw;
+  padding: 0.4rem 0.8rem;
   border-radius: 1rem;
+  font-size: 1.2rem;
 }
 
 .book-form .add-book {

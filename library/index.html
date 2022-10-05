@@ -4,27 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library</title>
+    <title>Library Project</title>
     <link rel="stylesheet" href="css/style.css" />
     <script defer src="js/script.js"></script>
   </head>
   <body>
-    <h1>Library</h1>
-    <div class="library-container"></div>
+    <h1>Library Project</h1>
+    <div class="library-container">
+      <h2 class="cta-text">Add your book here</h2>
+    </div>
     <form action="#" class="book-form">
       <legend>Enter book info</legend>
-      <fieldset>
-        <label for="title">Book title</label>
-        <input type="text" id="title" class="title" />
-      </fieldset>
-      <fieldset>
-        <label for="author">Book author</label>
-        <input type="text" id="author" class="author" />
-      </fieldset>
-      <fieldset>
-        <label for="num-pages">Number of pages</label>
-        <input type="text" id="num-pages" class="num-pages" />
-      </fieldset>
+      <div class="form-group">
+        <fieldset>
+          <label for="title">Book title</label>
+          <input type="text" id="title" class="title" />
+        </fieldset>
+        <fieldset>
+          <label for="author">Book author</label>
+          <input type="text" id="author" class="author" />
+        </fieldset>
+        <fieldset>
+          <label for="num-pages">Number of pages</label>
+          <input type="text" id="num-pages" class="num-pages" />
+        </fieldset>
+      </div>
       <button type="submit" class="btn add-book">Add book</button>
     </form>
   </body>
