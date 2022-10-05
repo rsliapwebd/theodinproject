@@ -3,3 +3,76 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  background-color: #e0e7ff;
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 2.4rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.2rem;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border: none;
+  border-radius: 9000px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+.library-container {
+  height: 10rem;
+  width: 100%;
+  padding: 1.6rem;
+  background-color: #fff;
+  border: 5px solid #a5b4fc;
+  border-radius: 1rem;
+}
+
+.book-form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.6rem;
+  padding: 1.6rem;
+  border: 5px solid #a5b4fc;
+  border-radius: 1rem;
+}
+
+.book-form legend {
+  font-size: 1.6rem;
+  align-self: center;
+}
+
+.book-form fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.book-form input {
+  padding: 0.6rem 1.2rem;
+  border-radius: 1rem;
+}
+
+.book-form .add-book {
+  align-self: center;
+}
