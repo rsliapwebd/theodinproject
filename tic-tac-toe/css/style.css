@@ -17,8 +17,35 @@ body {
   gap: 3.2rem;
 }
 
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.2rem;
+  color: #f1f5f9;
+  background-color: #0f766e;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
 h1 {
   font-size: 3.2rem;
+}
+
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 9.6rem;
+}
+
+.player {
+  font-size: 1.6rem;
+}
+
+.player-active {
+  color: #0f766e;
+  text-decoration: underline;
 }
 
 .grid {

@@ -2,6 +2,8 @@
 
 const cells = document.querySelectorAll(".cell");
 const message = document.querySelector("h2");
+const restart = document.querySelector(".btn");
+const gamePlayers = document.querySelectorAll(".player");
 let isPlaying = true;
 
 const gameBoard = (function () {
@@ -14,6 +16,7 @@ const players = (function () {
   return { activePlayer };
 })();
 
+// Playing
 const playing = (function () {
   if (isPlaying) markCell();
 })();
@@ -22,12 +25,14 @@ const playing = (function () {
 function markCell() {
   cells.forEach((cell, index) =>
     cell.addEventListener("click", function (e) {
-      if (gameBoard.marks[index] === "") {
-        e.target.textContent = players.activePlayer;
-        gameBoard.marks[index] = players.activePlayer;
-        players.activePlayer = switchPlayer();
-        console.log(gameBoard.marks);
-        checkWinner();
+      if (isPlaying) {
+        if (gameBoard.marks[index] === "") {
+          e.target.textContent = players.activePlayer;
+          gameBoard.marks[index] = players.activePlayer;
+          players.activePlayer = switchPlayer();
+          const combs = formCombs();
+          checkWinner(combs);
+        }
       }
     })
   );
@@ -35,7 +40,9 @@ function markCell() {
 
 // Switch Player
 function switchPlayer() {
-  console.log(players.activePlayer);
+  gamePlayers.forEach((player) => {
+    player.classList.toggle("player-active");
+  });
   return players.activePlayer === "X" ? "O" : "X";
 }
 
@@ -58,15 +65,28 @@ function formCombs() {
   ];
 
   const combinations = [...horizontals, ...verticals, ...diagonals];
+
+  return combinations;
 }
 
 // Check for winner
-function checkWinner() {
+function checkWinner(combs) {
   console.log(combs);
   combs.forEach((comb) => {
     if (comb.every((n) => n === comb[0] && comb[0] !== "")) {
-      isPlaying = false;
       message.textContent = `${comb[0]} is a winner!`;
+      isPlaying = false;
     }
   });
 }
+
+// Restart
+restart.addEventListener("click", function () {
+  gameBoard.marks = ["", "", "", "", "", "", "", "", ""];
+  cells.forEach((cell) => (cell.textContent = ""));
+  message.textContent = "";
+  players.activePlayer = "X";
+  isPlaying = true;
+  gamePlayers[0].classList.add("player-active");
+  gamePlayers[1].classList.remove("player-active");
+});
