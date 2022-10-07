@@ -31,4 +31,9 @@ h1 {
   width: 10rem;
   height: 10rem;
   border: 1px solid #0f766e;
+  font-size: 3.2rem;
+  color: #0f766e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
