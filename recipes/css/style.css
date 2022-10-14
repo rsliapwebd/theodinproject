@@ -40,6 +40,16 @@ body {
   background-color: #d97706;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin: 1.2rem;
+}
+
 /* Header */
 .header {
   text-align: center;
@@ -88,6 +98,10 @@ body {
 
 .product-title {
   font-size: 2rem;
+}
+
+.ingredients-container {
+  font-size: 1.2rem;
 }
 
 /* FOOTER */
