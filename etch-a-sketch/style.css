@@ -46,7 +46,7 @@ h1 {
 }
 
 .grid-container {
-  width: 60rem;
+  width: 50rem;
   display: flex;
   flex-wrap: wrap;
 }
