@@ -10,10 +10,10 @@ const resetGridBtn = document.querySelector(".btn-reset");
 
 // DEFAULT GRID LOAD
 const defaultGridLoad = function () {
-  gridCell.style.width = `${60 / 32}rem`;
-  gridCell.style.height = `${60 / 32}rem`;
+  gridCell.style.width = `${60 / 30}rem`;
+  gridCell.style.height = `${60 / 30}rem`;
 
-  for (let i = 0; i < 1024; i++) {
+  for (let i = 0; i < 900; i++) {
     gridContainer.appendChild(gridCell.cloneNode(true));
   }
 };
