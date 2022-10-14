@@ -54,6 +54,11 @@ function addBooksToDisplay() {
     }</h4>
     <button class='btn btn-remove'>Remove</button>
     `;
+    function generateNum() {
+      const randomNum = Math.floor(Math.random() * 255);
+      return randomNum;
+    }
+    div.style.background = `linear-gradient(145deg, rgb(${generateNum()}, ${generateNum()}, ${generateNum()}), rgb(${generateNum()}, ${generateNum()}, ${generateNum()}))`;
     div.classList.add("book");
     libraryContainer.appendChild(div);
   });
