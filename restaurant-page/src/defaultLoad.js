@@ -1,4 +1,4 @@
-const body = document.querySelector("body");
+const content = document.querySelector("#content");
 
 const createElement = function (parent, element, elClass) {
   const newElement = document.createElement(element);
@@ -7,10 +7,28 @@ const createElement = function (parent, element, elClass) {
 };
 
 const defaultLoad = function () {
-  createElement(body, "div", "container");
+  // Title
+  createElement(content, "h1", "main-title");
+  const h1 = document.querySelector("h1");
+  h1.textContent = "Restaurant Page";
+  // Container
+  createElement(content, "div", "container");
   const container = document.querySelector(".container");
+  // Tabs
   createElement(container, "div", "tabs");
   const tabs = document.querySelector(".tabs");
-  createElement(tabs, "div", "tab");
+  // Individual tab
+  createElement(tabs, "div", "tab-home");
+  const tabHome = document.querySelector(".tab-home");
+  tabHome.textContent = "Home";
+  createElement(tabs, "div", "tab-menu");
+  const tabMenu = document.querySelector(".tab-menu");
+  tabMenu.textContent = "Menu";
+  createElement(tabs, "div", "tab-contact");
+  const tabContact = document.querySelector(".tab-contact");
+  tabContact.textContent = "Contact Us";
+  // Text container
   createElement(container, "div", "text-container");
 };
+
+export { defaultLoad };

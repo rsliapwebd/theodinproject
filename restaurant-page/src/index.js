@@ -1,1 +1,3 @@
-console.log("Webpack");
+import { defaultLoad } from "./defaultLoad";
+
+defaultLoad();
