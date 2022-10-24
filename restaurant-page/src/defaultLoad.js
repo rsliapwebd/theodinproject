@@ -26,7 +26,7 @@ const defaultLoad = function () {
   tabMenu.textContent = "Menu";
   createElement(tabs, "div", "tab-contact");
   const tabContact = document.querySelector(".tab-contact");
-  tabContact.textContent = "Contact Us";
+  tabContact.textContent = "Contact";
   // Text container
   createElement(container, "div", "text-container");
 };
