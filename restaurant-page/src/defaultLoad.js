@@ -29,6 +29,8 @@ const defaultLoad = function () {
   tabContact.textContent = "Contact";
   // Text container
   createElement(container, "div", "text-container");
+
+  return { tabs, tabHome, tabMenu, tabContact };
 };
 
 export { defaultLoad };
