@@ -7,7 +7,7 @@
 body {
   font-size: 62.5%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #f1f5f9;
+  color: #fff;
   background: url("./img/background.jpg") no-repeat center center/cover;
 }
 
@@ -48,16 +48,19 @@ h1 {
   justify-content: center;
   align-items: flex-start;
   min-height: 75vh;
+  border-radius: 2.4rem;
+  overflow: hidden;
 }
 
 .tabs {
-  background-color: #eef2ff;
+  background-color: rgba(238, 242, 255, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
   text-align: center;
   flex: 1;
+  align-self: stretch;
 }
 
 .tabs div {
@@ -68,11 +71,7 @@ h1 {
 }
 
 .tabs div:hover {
-  background-color: #f5d0fe;
-}
-
-.active {
-  background-color: #f1f5f9;
+  background-color: #ffedd5;
 }
 
 .text-container {
@@ -87,4 +86,10 @@ h1 {
   justify-content: center;
   gap: 1.6rem;
   padding: 3.2rem;
+}
+
+.text-container img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
 }
