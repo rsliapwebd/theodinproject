@@ -1,5 +1,15 @@
 import "./style.css";
 
-import { defaultLoad } from "./js_modules/defaultLoad.js";
+import { htmlLoad } from "./js_modules/htmlLoad.js";
+import { Project } from "./js_modules/projectClass.js";
+import { projectsForm } from "./js_modules/projectsForm.js";
 
-defaultLoad();
+const projectsLibrary = [];
+
+// Loading app
+const firstLoad = htmlLoad();
+
+firstLoad.projectsBtn.addEventListener("click", function () {
+  projectsForm(firstLoad.projects);
+  const newProject = new Project();
+});
