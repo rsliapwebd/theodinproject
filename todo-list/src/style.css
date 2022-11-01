@@ -69,14 +69,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.8rem;
+  gap: 0.8rem;
+  padding: 1.2rem;
   position: relative;
 }
 
 .project-title {
   font-size: 1.2rem;
   text-decoration: underline;
+}
+
+.project-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-author,
+.project-priority {
+  color: #e2e8f0;
+  font-weight: 500;
 }
 
 .close {

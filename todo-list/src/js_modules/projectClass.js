@@ -1,5 +1,5 @@
 class Project {
-  constructor(title, desc, month, priority) {
+  constructor(title, desc, author, priority) {
     this.title = title;
     this.desc = desc;
     this.author = author;
@@ -7,4 +7,14 @@ class Project {
   }
 }
 
-export { Project };
+const createProject = function (formOptions, object) {
+  const newProject = new Project(
+    formOptions.title.value,
+    formOptions.desc.value,
+    formOptions.author.value,
+    formOptions.priority.value
+  );
+  object.push(newProject);
+};
+
+export { createProject };

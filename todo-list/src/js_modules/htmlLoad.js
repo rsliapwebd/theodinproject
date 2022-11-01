@@ -40,6 +40,12 @@ const htmlLoad = function () {
   </div>
   <button class="btn form-btn">Submit</button>
   `;
+  const formBtn = document.querySelector(".form-btn");
+  // Form inputs
+  const title = document.querySelector("#title");
+  const desc = document.querySelector("#desc");
+  const author = document.querySelector("#author");
+  const priority = document.querySelector("#priority");
   // Todos
   createElement("div", container, "todos");
   const todos = document.querySelector(".todos");
@@ -48,7 +54,19 @@ const htmlLoad = function () {
   todosBtn.classList.add("btn");
   todosBtn.textContent = "Add Todo";
 
-  return { projects, projectsCont, projectsBtn, form, todos, todosBtn };
+  return {
+    projects,
+    projectsCont,
+    projectsBtn,
+    form,
+    formBtn,
+    title,
+    desc,
+    author,
+    priority,
+    todos,
+    todosBtn,
+  };
 };
 
 export { container, htmlLoad };
