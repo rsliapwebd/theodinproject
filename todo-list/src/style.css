@@ -35,7 +35,7 @@ body {
 }
 
 .todos {
-  flex: 3;
+  flex: 2;
 }
 
 .projects,
@@ -50,6 +50,31 @@ body {
   padding: 1.6rem;
 }
 
+.projects-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.project {
+  width: 100%;
+  font-size: 1rem;
+  background-color: #14b8a6;
+  color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+}
+
+.project-title {
+  font-size: 1.2rem;
+}
+
 .project-form,
 .form-group {
   display: flex;
@@ -60,8 +85,11 @@ body {
 
 .project-form {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   font-size: 1rem;
-  gap: 0.6rem;
+  gap: 0.8rem;
   padding: 0.8rem;
 }
 
@@ -70,11 +98,19 @@ body {
   gap: 0.4rem;
 }
 
-.form-group label {
+.form-group input {
+  display: inline-block;
   width: 100%;
+  border-radius: 1rem;
+  padding: 0.4rem 0.8rem;
 }
 
 .form-btn {
   font-size: 1rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.6rem 1rem;
+  align-self: center;
+}
+
+.hidden {
+  display: none;
 }

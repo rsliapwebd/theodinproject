@@ -2,7 +2,7 @@ class Project {
   constructor(title, desc, month, priority) {
     this.title = title;
     this.desc = desc;
-    this.month = month;
+    this.author = author;
     this.priority = priority;
   }
 }
