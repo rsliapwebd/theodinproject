@@ -12,10 +12,12 @@ import { hiddenToggler } from "./js_modules/hiddenToggler.js";
 const firstLoad = htmlLoad();
 renderProjects(firstLoad.projectsCont);
 
+// Open new project form
 firstLoad.projectsBtn.addEventListener("click", function () {
   hiddenToggler(firstLoad);
 });
 
+// Add new project and hide form
 firstLoad.formBtn.addEventListener("click", function (e) {
   e.preventDefault();
   createProject(firstLoad, projectsLibrary);
