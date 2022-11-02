@@ -21,6 +21,7 @@ firstLoad.projectsBtn.addEventListener("click", function () {
 // Add new project and hide form
 firstLoad.formBtn.addEventListener("click", function (e) {
   e.preventDefault();
+  console.log(projectsLibrary);
   createProject(firstLoad, projectsLibrary);
   renderProjects(firstLoad.projectsCont);
   hiddenToggler(firstLoad);

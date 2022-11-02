@@ -22,9 +22,11 @@ const removeProject = function (arr) {
   const closeBtns = document.querySelectorAll(".close");
   closeBtns.forEach((btn, index) => {
     btn.addEventListener("click", function (e) {
-      e.target.closest(".project").remove();
-      arr.splice(index, 1);
-      console.log(index, arr);
+      if (index !== 0) {
+        e.target.closest(".project").remove();
+        arr.splice(index, 1);
+        console.log(index, arr);
+      }
     });
   });
 };
