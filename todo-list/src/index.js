@@ -5,6 +5,7 @@ import { createProject } from "./js_modules/projectClass.js";
 import {
   projectsLibrary,
   renderProjects,
+  removeProject,
 } from "./js_modules/renderProjects.js";
 import { hiddenToggler } from "./js_modules/hiddenToggler.js";
 
@@ -23,4 +24,5 @@ firstLoad.formBtn.addEventListener("click", function (e) {
   createProject(firstLoad, projectsLibrary);
   renderProjects(firstLoad.projectsCont);
   hiddenToggler(firstLoad);
+  removeProject(projectsLibrary);
 });

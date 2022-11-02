@@ -18,4 +18,15 @@ const renderProjects = function (parent) {
   });
 };
 
-export { projectsLibrary, renderProjects };
+const removeProject = function (arr) {
+  const closeBtns = document.querySelectorAll(".close");
+  closeBtns.forEach((btn, index) => {
+    btn.addEventListener("click", function (e) {
+      e.target.closest(".project").remove();
+      arr.splice(index, 1);
+      console.log(index, arr);
+    });
+  });
+};
+
+export { projectsLibrary, renderProjects, removeProject };
