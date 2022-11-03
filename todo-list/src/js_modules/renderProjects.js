@@ -12,7 +12,7 @@ const renderProjects = function (parent) {
   projectsLibrary.forEach((obj) => {
     const project = document.createElement("div");
     project.classList.add("project");
-    project.innerHTML = `<span class="project-title">${obj.title}</span><span>${obj.desc}</span><div class="project-info"><span class="project-author">Added by ${obj.author}</span><span class="project-priority">${obj.priority} priority</span></div><div class="close">×</div>
+    project.innerHTML = `<span class="project-title">${obj.title}</span><div class="project-info"><span class="project-author">Added by ${obj.author}</span><span class="project-priority">${obj.priority} priority</span></div><div class="close">×</div>
     `;
     parent.append(project);
   });
@@ -31,4 +31,36 @@ const removeProject = function (arr) {
   });
 };
 
-export { projectsLibrary, renderProjects, removeProject };
+const chooseActiveAndRenderTodos = function (parent, array) {
+  const allProjects = document.querySelectorAll(".project");
+  allProjects.forEach((project, index, arr) => {
+    project.addEventListener("click", function (e) {
+      if (!project.classList.contains("active")) {
+        parent.innerHTML = "";
+        arr.forEach((item) => item.classList.remove("active"));
+        // Render desccription
+        const newEl = document.createElement("div");
+        newEl.classList.add("description");
+        newEl.innerHTML = `
+        <h3>Projects description:</h3>
+        <p>${array[index].desc}</p>
+        <div class="todo-info">
+          <input type="text" class="todo-input">
+          <button class="btn todo-btn">Add Todo</button>
+        </div>
+        `;
+        parent.append(newEl);
+        project.classList.add("active");
+      }
+    });
+  });
+};
+
+const addTodo = function (parent) {};
+
+export {
+  projectsLibrary,
+  renderProjects,
+  removeProject,
+  chooseActiveAndRenderTodos,
+};

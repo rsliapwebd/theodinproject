@@ -49,10 +49,6 @@ const htmlLoad = function () {
   // Todos
   createElement("div", container, "todos");
   const todos = document.querySelector(".todos");
-  createElement("button", todos, "todos-btn");
-  const todosBtn = document.querySelector(".todos-btn");
-  todosBtn.classList.add("btn");
-  todosBtn.textContent = "Add Todo";
 
   return {
     projects,
@@ -65,7 +61,6 @@ const htmlLoad = function () {
     author,
     priority,
     todos,
-    todosBtn,
   };
 };
 
