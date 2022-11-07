@@ -1,4 +1,4 @@
-import { addTodo, renderTodos } from "./addTodo.js";
+import { addTodo } from "./addTodo.js";
 
 const projectsLibrary = [
   {
@@ -6,7 +6,7 @@ const projectsLibrary = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quo unde quasi delectus autem amet cumque praesentium tenetur molestiae soluta nihil consequuntur ipsum modi eveniet expedita doloremque, illum repellendus suscipit.",
     author: "Roman",
     priority: "Low",
-    todos: "Test",
+    todos: ["Test"],
   },
 ];
 
@@ -28,7 +28,6 @@ const removeProject = function (arr) {
       if (index !== 0) {
         e.target.closest(".project").remove();
         arr.splice(index, 1);
-        console.log(index, arr);
       }
     });
   });
@@ -37,7 +36,7 @@ const removeProject = function (arr) {
 const chooseActiveAndRenderTodos = function (parent, array) {
   const allProjects = document.querySelectorAll(".project");
   allProjects.forEach((project, index, arr) => {
-    project.addEventListener("click", function (e) {
+    project.addEventListener("click", function () {
       if (!project.classList.contains("active")) {
         parent.innerHTML = "";
         arr.forEach((item) => item.classList.remove("active"));
@@ -47,7 +46,7 @@ const chooseActiveAndRenderTodos = function (parent, array) {
         newEl.innerHTML = `
         <h3>Project description:</h3>
         <p>${array[index].desc}</p>
-        <div class="todos-inner></div>
+        <div class="todos-inner"></div>
         <div class="todo-info">
           <input type="text" class="todo-input">
           <button class="btn todo-btn">Add Todo</button>
@@ -55,10 +54,8 @@ const chooseActiveAndRenderTodos = function (parent, array) {
         `;
         parent.append(newEl);
         project.classList.add("active");
-
-        const todosInner = document.querySelector(".todos-inner");
-        addTodo(projectsLibrary[index].todos, todosInner);
       }
+      addTodo(projectsLibrary[index].todos);
     });
   });
 };
