@@ -4,6 +4,7 @@ class Project {
     this.desc = desc;
     this.author = author;
     this.priority = priority;
+    this.todos = [];
   }
 }
 

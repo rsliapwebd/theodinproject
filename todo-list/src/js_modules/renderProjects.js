@@ -1,9 +1,12 @@
+import { addTodo, renderTodos } from "./addTodo.js";
+
 const projectsLibrary = [
   {
     title: "Simple project",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quo unde quasi delectus autem amet cumque praesentium tenetur molestiae soluta nihil consequuntur ipsum modi eveniet expedita doloremque, illum repellendus suscipit.",
     author: "Roman",
     priority: "Low",
+    todos: "Test",
   },
 ];
 
@@ -42,8 +45,9 @@ const chooseActiveAndRenderTodos = function (parent, array) {
         const newEl = document.createElement("div");
         newEl.classList.add("description");
         newEl.innerHTML = `
-        <h3>Projects description:</h3>
+        <h3>Project description:</h3>
         <p>${array[index].desc}</p>
+        <div class="todos-inner></div>
         <div class="todo-info">
           <input type="text" class="todo-input">
           <button class="btn todo-btn">Add Todo</button>
@@ -51,12 +55,13 @@ const chooseActiveAndRenderTodos = function (parent, array) {
         `;
         parent.append(newEl);
         project.classList.add("active");
+
+        const todosInner = document.querySelector(".todos-inner");
+        addTodo(projectsLibrary[index].todos, todosInner);
       }
     });
   });
 };
-
-const addTodo = function (parent) {};
 
 export {
   projectsLibrary,
