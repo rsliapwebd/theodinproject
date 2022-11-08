@@ -38,8 +38,12 @@ Fictional library using ES6 classes.
 
 ### Tic-tac-toc
 
-Classic game made by using factory functions and module pattern
+Classic game made by using factory functions and module pattern.
 
 ### Restaurant Page
 
 Simple landing page with use of ES6 import and export modules.
+
+### Todo List
+
+Todo app made by using webpack.
