@@ -46,7 +46,8 @@ const chooseActiveAndRenderTodos = function (parent, array) {
         newEl.innerHTML = `
         <h3>Project description:</h3>
         <p>${array[index].desc}</p>
-        <div class="todos-inner"></div>
+        <div class="todos-inner">
+        </div>
         <div class="todo-info">
           <input type="text" class="todo-input">
           <button class="btn todo-btn">Add Todo</button>

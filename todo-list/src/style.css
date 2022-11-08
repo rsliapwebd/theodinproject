@@ -9,6 +9,13 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #d5d5d5;
   background-color: #333;
+  padding: 2.4rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .btn {
@@ -32,10 +39,12 @@ body {
 
 .projects {
   flex: 1 0 10rem;
+  border-radius: 1rem;
 }
 
 .todos {
   flex: 2;
+  border-radius: 1rem;
 }
 
 .projects,
