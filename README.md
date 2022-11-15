@@ -47,3 +47,7 @@ Simple landing page with use of ES6 import and export modules.
 ### Todo List
 
 Todo app made by using webpack.
+
+### Weather App
+
+Weather forecast made with OpenWeather API.
