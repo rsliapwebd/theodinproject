@@ -9,7 +9,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 4.8rem;
   background-color: #ddd;
-  color: #333;
+  color: #0f172a;
 }
 
 .btn {
@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 9.6rem;
+  gap: 4.8rem;
 }
 
 .title-container {
@@ -38,7 +38,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.4rem;
+  gap: 1.6rem;
 }
 
 .title-left {
@@ -47,6 +47,7 @@ body {
 
 .title-right {
   align-self: end;
+  color: #22c55e;
 }
 
 .inner-container {
@@ -66,6 +67,8 @@ body {
   align-items: center;
   gap: 1.6rem;
   padding: 1.6rem;
+  background-color: rgba(241, 245, 249, 0.25);
+  border-radius: 1rem;
 }
 
 .user-location {

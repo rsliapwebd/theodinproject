@@ -54,10 +54,34 @@ const renderInfo = function (obj) {
       </section>
     </div>
   `;
+  content.appendChild(div);
+
+  getConditions(obj);
+};
+
+// Get background piture for weather
+const getConditions = function (obj) {
+  const weather = obj.weather[0].main;
+  let condition;
+
+  switch (weather) {
+    case "Clouds":
+      condition = clouds;
+      break;
+    case "Clear":
+      condition = clear;
+      break;
+    case "Snow":
+      condition = snow;
+      break;
+    case "Rain":
+      condition = rain;
+      break;
+    case "Drizzle":
+      condition = mist;
+      break;
+  }
 
   const body = document.querySelector("body");
-  const weather = getCondition(obj);
-  body.style.background = `url(${clouds}) no-repeat center center/cover`;
-
-  content.appendChild(div);
+  body.style.background = `url(${condition}) no-repeat center center/cover`;
 };
