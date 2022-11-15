@@ -84,7 +84,7 @@ const getConditions = function (obj) {
     case "Rain":
       condition = rain;
       break;
-    case "Drizzle":
+    default:
       condition = mist;
       break;
   }
