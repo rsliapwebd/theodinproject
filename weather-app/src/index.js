@@ -22,12 +22,16 @@ const getLocation = (function () {
 
 // Get weather data
 const getWeatherData = async function (obj) {
-  const jsonData = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${obj.lat}&lon=${obj.long}&appid=c4fd4dbbe8a63984662de3192f30f560`
-  );
-  const data = await jsonData.json();
-  console.log(data);
-  renderInfo(data);
+  try {
+    const jsonData = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${obj.lat}&lon=${obj.long}&appid=c4fd4dbbe8a63984662de3192f30f560`
+    );
+    const data = await jsonData.json();
+    console.log(data);
+    renderInfo(data);
+  } catch (err) {
+    alert("Somethimg went wrong :(");
+  }
 };
 
 // Render weather info
@@ -95,12 +99,17 @@ const getConditions = function (obj) {
 
 // Get user input and find location
 const getUserLocation = async function () {
-  const input = document.querySelector("input");
-  const findCityJSON = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=c4fd4dbbe8a63984662de3192f30f560`
-  );
-  const city = await findCityJSON.json();
-  renderInfo(city);
+  try {
+    const input = document.querySelector("input");
+    const findCityJSON = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=c4fd4dbbe8a63984662de3192f30f560`
+    );
+    const city = await findCityJSON.json();
+    console.log(city);
+    renderInfo(city);
+  } catch (err) {
+    alert("Something went wrong :(");
+  }
 };
 
 // Clear content
