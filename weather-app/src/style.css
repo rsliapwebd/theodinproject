@@ -47,7 +47,7 @@ body {
 
 .title-right {
   align-self: end;
-  color: #22c55e;
+  color: #14532d;
 }
 
 .inner-container {
@@ -94,4 +94,5 @@ body {
   padding: 0.4rem 0.6rem;
   border-radius: 1rem;
   border: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

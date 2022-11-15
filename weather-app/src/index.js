@@ -54,9 +54,16 @@ const renderInfo = function (obj) {
       </section>
     </div>
   `;
+  clearContent();
   content.appendChild(div);
 
   getConditions(obj);
+
+  const btn = document.querySelector(".btn");
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    getUserLocation();
+  });
 };
 
 // Get background piture for weather
@@ -84,4 +91,19 @@ const getConditions = function (obj) {
 
   const body = document.querySelector("body");
   body.style.background = `url(${condition}) no-repeat center center/cover`;
+};
+
+// Get user input and find location
+const getUserLocation = async function () {
+  const input = document.querySelector("input");
+  const findCityJSON = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=c4fd4dbbe8a63984662de3192f30f560`
+  );
+  const city = await findCityJSON.json();
+  renderInfo(city);
+};
+
+// Clear content
+const clearContent = function () {
+  content.innerHTML = "";
 };
