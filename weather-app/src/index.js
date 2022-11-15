@@ -1,5 +1,12 @@
 import "./style.css";
 
+// Images
+import clouds from "./img/clouds.jpg";
+import clear from "./img/clear.jpg";
+import snow from "./img/snow.jpg";
+import rain from "./img/rain.jpg";
+import mist from "./img/mist.jpg";
+
 const content = document.querySelector("#content");
 
 // Get current geolocation and do stuff
@@ -34,19 +41,23 @@ const renderInfo = function (obj) {
     </div>
     <div class="inner-container">
       <section class="weather-summary">
-        <span>${((obj.main.temp - 32) * 0.55).toFixed(1)} Celsius</span>
-        <span>${obj.weather[0].main} weather</span>
-        <span>${obj.wind.speed} m/s</span>
+        <span>${(obj.main.temp - 273.15).toFixed(1)} Celsius degree</span>
+        <span>Currently: ${obj.weather[0].main}</span>
+        <span>Wind is ${obj.wind.speed} m/s</span>
       </section>
       <section class="user-location">
         <form class="form">
-          <label for ="place">Enter another place</label>
+          <label for ="place">Try another place</label>
           <input type="text" required>
           <button class="btn">Submit</button>
         </form>
       </section>
     </div>
   `;
+
+  const body = document.querySelector("body");
+  const weather = getCondition(obj);
+  body.style.background = `url(${clouds}) no-repeat center center/cover`;
 
   content.appendChild(div);
 };
