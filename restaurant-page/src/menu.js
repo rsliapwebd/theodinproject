@@ -8,8 +8,6 @@ const textMenu = function () {
   <li><h3>Position One</h3></li>
   <li><h3>Position Two</h3></li>
   <li><h3>Position Three</h3></li>
-  <li><h3>Position Four</h3></li>
-  <li><h3>Position Five</h3></li>
   </ul>
   `;
   const textContainer = document.querySelector(".text-container");
