@@ -1,0 +1,9 @@
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .todo-info {
+    flex-direction: column;
+  }
+}

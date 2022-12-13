@@ -1,4 +1,5 @@
 import "./style.css";
+import "./queries.css";
 
 import { htmlLoad } from "./js_modules/htmlLoad.js";
 import { createProject } from "./js_modules/projectClass.js";
