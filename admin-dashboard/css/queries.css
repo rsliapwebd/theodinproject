@@ -1,0 +1,17 @@
+@media (max-width: 400px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header,
+  .anno-container,
+  .trending-container {
+    display: none;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
