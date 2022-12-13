@@ -11,7 +11,7 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/bakery-main.jpg") center/cover;
   /* height: 100vh; */
-  padding: 3.2rem;
+  padding: 0.8rem;
 }
 
 .container {
