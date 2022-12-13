@@ -85,6 +85,10 @@ a:visited {
   font-weight: 700;
 }
 
+.nav-btn {
+  font-size: 1rem;
+}
+
 /* HERO */
 .hero {
   display: flex;

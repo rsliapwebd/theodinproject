@@ -21,4 +21,15 @@
   .cta-box {
     flex-direction: column;
   }
+}
+
+@media (max-width: 810px) {
+  .nav-list {
+    font-size: 0.8rem;
+  }
+
+  a.btn.nav-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
 } ;
