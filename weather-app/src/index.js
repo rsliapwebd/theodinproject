@@ -1,4 +1,5 @@
 import "./style.css";
+import "./queries.css";
 
 // Images
 import clouds from "./img/clouds.jpg";
